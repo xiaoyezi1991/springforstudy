@@ -1,6 +1,7 @@
 package com.yezi.springforstudy.ioc;
 
 
+import com.yezi.springforstudy.ioc.beans.Car;
 import com.yezi.springforstudy.ioc.beans.MyBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,6 +14,9 @@ public class Ioc {
         System.out.println(myBean);
         myBean = (MyBean) applicationContext.getBean("myBean1");
         System.out.println(myBean);
+        Car car = (Car) applicationContext.getBean("car");
+        System.out.println(car);
+        ((ClassPathXmlApplicationContext) applicationContext).close();
     }
 
 
