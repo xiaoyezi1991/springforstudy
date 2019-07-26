@@ -26,6 +26,7 @@ public class TmTxDao {
         String sql = "select * from jdbc_student where id = ?";
         Map map = jdbcTemplate.queryForMap(sql, id);
         logger.info("sql ={},id = {}",sql,id);
+        System.out.println(map);
         return map;
     }
 

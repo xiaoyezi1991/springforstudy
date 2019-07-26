@@ -10,7 +10,7 @@ public class Test {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("classpath:jdbc_tx.xml");
         TmTxDao tmTxDao = (TmTxDao) context.getBean("tmTxDao");
 
-        tmTxDao.withoutTx();
+        tmTxDao.withTx();
 
         // tmTxDao.withTransactionTemplate();
 
